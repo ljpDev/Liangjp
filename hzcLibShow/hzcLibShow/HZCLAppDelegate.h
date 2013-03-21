@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class HZCLViewController;
+@class HZCLRootViewController;
 
 @interface HZCLAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -16,6 +17,6 @@
 
 @property (strong, nonatomic) HZCLViewController *viewController;
 
-@property (strong,nonatomic) UINavigationController *navRoot;
+@property (strong, nonatomic) HZCLRootViewController *navRoot;
 
 @end

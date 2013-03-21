@@ -10,6 +10,8 @@
 
 #import "HZCLViewController.h"
 
+#import "HZCLRootViewController.h"
+
 @implementation HZCLAppDelegate
 
 - (void)dealloc
@@ -25,7 +27,8 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     //Add navigation view
-    self.navRoot = [[UINavigationController alloc] init];
+    self.navRoot = [[HZCLRootViewController alloc] init];
+
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         self.viewController = [[[HZCLViewController alloc] initWithNibName:@"HZCLViewController_iPhone" bundle:nil] autorelease];
     } else {
