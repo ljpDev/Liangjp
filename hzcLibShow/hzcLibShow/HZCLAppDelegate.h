@@ -16,4 +16,6 @@
 
 @property (strong, nonatomic) HZCLViewController *viewController;
 
+@property (strong,nonatomic) UINavigationController *navRoot;
+
 @end

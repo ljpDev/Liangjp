@@ -85,12 +85,9 @@
 		6DF841A816FB2B35008A5066 /* hzcLibShow */ = {
 			isa = PBXGroup;
 			children = (
+				6DF841C816FB2F02008A5066 /* viewController */,
 				6DF841B116FB2B35008A5066 /* HZCLAppDelegate.h */,
 				6DF841B216FB2B35008A5066 /* HZCLAppDelegate.m */,
-				6DF841BA16FB2B35008A5066 /* HZCLViewController.h */,
-				6DF841BB16FB2B35008A5066 /* HZCLViewController.m */,
-				6DF841BD16FB2B35008A5066 /* HZCLViewController_iPhone.xib */,
-				6DF841C016FB2B35008A5066 /* HZCLViewController_iPad.xib */,
 				6DF841A916FB2B35008A5066 /* Supporting Files */,
 			);
 			path = hzcLibShow;
@@ -108,6 +105,17 @@
 				6DF841B816FB2B35008A5066 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6DF841C816FB2F02008A5066 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				6DF841BA16FB2B35008A5066 /* HZCLViewController.h */,
+				6DF841BB16FB2B35008A5066 /* HZCLViewController.m */,
+				6DF841BD16FB2B35008A5066 /* HZCLViewController_iPhone.xib */,
+				6DF841C016FB2B35008A5066 /* HZCLViewController_iPad.xib */,
+			);
+			name = viewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +284,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hzcLibShow/hzcLibShow-Prefix.pch";
 				INFOPLIST_FILE = "hzcLibShow/hzcLibShow-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -287,6 +296,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hzcLibShow/hzcLibShow-Prefix.pch";
 				INFOPLIST_FILE = "hzcLibShow/hzcLibShow-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

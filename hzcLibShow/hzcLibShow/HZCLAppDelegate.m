@@ -16,6 +16,7 @@
 {
     [_window release];
     [_viewController release];
+    [_navRoot release];
     [super dealloc];
 }
 
@@ -23,12 +24,15 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
+    //Add navigation view
+    self.navRoot = [[UINavigationController alloc] init];
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         self.viewController = [[[HZCLViewController alloc] initWithNibName:@"HZCLViewController_iPhone" bundle:nil] autorelease];
     } else {
         self.viewController = [[[HZCLViewController alloc] initWithNibName:@"HZCLViewController_iPad" bundle:nil] autorelease];
     }
-    self.window.rootViewController = self.viewController;
+    [self.navRoot pushViewController:self.viewController animated:YES];
+    [self.window addSubview:self.navRoot.view];
     [self.window makeKeyAndVisible];
     return YES;
 }
