@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,21 +35,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-//For ios 5 totate to landscape,in ios 6 it was deprecated.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+-(BOOL)shouldAutorotate
 {
-    //return (toInterfaceOrientation == self.preferredInterfaceOrientationForPresentation);
-    return (toInterfaceOrientation != UIDeviceOrientationPortraitUpsideDown);
+    return [[self.viewControllers lastObject] shouldAutorotate];
 }
 
-- (BOOL)shouldAutorotate
+-(NSUInteger)supportedInterfaceOrientations
 {
-    return YES;
+    return [[self.viewControllers lastObject] supportedInterfaceOrientations];
 }
 
-- (NSUInteger)supportedInterfaceOrientations
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
 {
-    return UIInterfaceOrientationMaskLandscape;
+    return [[self.viewControllers lastObject] preferredInterfaceOrientationForPresentation];
 }
 
 @end

@@ -27,10 +27,11 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     //Add navigation view
-    self.navRoot = [[HZCLRootViewController alloc] init];
+    self.navRoot = [[HZCLRootViewController alloc] initWithNibName:@"HZCLRootViewController" bundle:nil];
 
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         self.viewController = [[[HZCLViewController alloc] initWithNibName:@"HZCLViewController_iPhone" bundle:nil] autorelease];
+        self.viewController.title =@"Welcome to here";
     } else {
         self.viewController = [[[HZCLViewController alloc] initWithNibName:@"HZCLViewController_iPad" bundle:nil] autorelease];
     }

@@ -19,7 +19,8 @@
 		6DF841BC16FB2B35008A5066 /* HZCLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF841BB16FB2B35008A5066 /* HZCLViewController.m */; };
 		6DF841BF16FB2B35008A5066 /* HZCLViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF841BD16FB2B35008A5066 /* HZCLViewController_iPhone.xib */; };
 		6DF841C216FB2B35008A5066 /* HZCLViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF841C016FB2B35008A5066 /* HZCLViewController_iPad.xib */; };
-		6DF841CB16FB371E008A5066 /* HZCLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF841CA16FB371E008A5066 /* HZCLRootViewController.m */; };
+		6DF841CF16FB47C9008A5066 /* HZCLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF841CD16FB47C8008A5066 /* HZCLRootViewController.m */; };
+		6DF841D016FB47C9008A5066 /* HZCLRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF841CE16FB47C8008A5066 /* HZCLRootViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +41,9 @@
 		6DF841BB16FB2B35008A5066 /* HZCLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCLViewController.m; sourceTree = "<group>"; };
 		6DF841BE16FB2B35008A5066 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HZCLViewController_iPhone.xib; sourceTree = "<group>"; };
 		6DF841C116FB2B35008A5066 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HZCLViewController_iPad.xib; sourceTree = "<group>"; };
-		6DF841C916FB371E008A5066 /* HZCLRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZCLRootViewController.h; sourceTree = "<group>"; };
-		6DF841CA16FB371E008A5066 /* HZCLRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCLRootViewController.m; sourceTree = "<group>"; };
+		6DF841CC16FB47C8008A5066 /* HZCLRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZCLRootViewController.h; sourceTree = "<group>"; };
+		6DF841CD16FB47C8008A5066 /* HZCLRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCLRootViewController.m; sourceTree = "<group>"; };
+		6DF841CE16FB47C8008A5066 /* HZCLRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HZCLRootViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +119,9 @@
 				6DF841BB16FB2B35008A5066 /* HZCLViewController.m */,
 				6DF841BD16FB2B35008A5066 /* HZCLViewController_iPhone.xib */,
 				6DF841C016FB2B35008A5066 /* HZCLViewController_iPad.xib */,
-				6DF841C916FB371E008A5066 /* HZCLRootViewController.h */,
-				6DF841CA16FB371E008A5066 /* HZCLRootViewController.m */,
+				6DF841CC16FB47C8008A5066 /* HZCLRootViewController.h */,
+				6DF841CD16FB47C8008A5066 /* HZCLRootViewController.m */,
+				6DF841CE16FB47C8008A5066 /* HZCLRootViewController.xib */,
 			);
 			name = viewController;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				6DF841B916FB2B35008A5066 /* Default-568h@2x.png in Resources */,
 				6DF841BF16FB2B35008A5066 /* HZCLViewController_iPhone.xib in Resources */,
 				6DF841C216FB2B35008A5066 /* HZCLViewController_iPad.xib in Resources */,
+				6DF841D016FB47C9008A5066 /* HZCLRootViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +198,7 @@
 				6DF841AF16FB2B35008A5066 /* main.m in Sources */,
 				6DF841B316FB2B35008A5066 /* HZCLAppDelegate.m in Sources */,
 				6DF841BC16FB2B35008A5066 /* HZCLViewController.m in Sources */,
-				6DF841CB16FB371E008A5066 /* HZCLRootViewController.m in Sources */,
+				6DF841CF16FB47C9008A5066 /* HZCLRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,11 +291,13 @@
 		6DF841C616FB2B35008A5066 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: hao baomin (86U98KN955)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hzcLibShow/hzcLibShow-Prefix.pch";
 				INFOPLIST_FILE = "hzcLibShow/hzcLibShow-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "888FCD81-1797-445C-9BC1-3D935E61F2BF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -299,11 +305,13 @@
 		6DF841C716FB2B35008A5066 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: hao baomin (86U98KN955)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "hzcLibShow/hzcLibShow-Prefix.pch";
 				INFOPLIST_FILE = "hzcLibShow/hzcLibShow-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "888FCD81-1797-445C-9BC1-3D935E61F2BF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -327,6 +335,7 @@
 				6DF841C716FB2B35008A5066 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

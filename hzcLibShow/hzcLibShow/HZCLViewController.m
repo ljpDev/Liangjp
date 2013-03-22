@@ -26,22 +26,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-//For ios 5 totate to landscape,in ios 6 it was deprecated.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-{
-    //return (toInterfaceOrientation == self.preferredInterfaceOrientationForPresentation);
-    return (toInterfaceOrientation != UIDeviceOrientationPortraitUpsideDown);
-}
-
-- (BOOL)shouldAutorotate
-{
-    return YES;
-}
-
-- (NSUInteger)supportedInterfaceOrientations
-{
-    return UIInterfaceOrientationMaskLandscape;
-}
+////For ios 5 totate to landscape,in ios 6 it was deprecated.
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+//{
+//    //return (toInterfaceOrientation == self.preferredInterfaceOrientationForPresentation);
+//    return (toInterfaceOrientation != UIDeviceOrientationPortraitUpsideDown);
+//}
+//
+//- (BOOL)shouldAutorotate
+//{
+//    return YES;
+//}
+//
+//- (NSUInteger)supportedInterfaceOrientations
+//{
+//    return UIInterfaceOrientationMaskLandscape;
+//}
 
 //- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
 //{
