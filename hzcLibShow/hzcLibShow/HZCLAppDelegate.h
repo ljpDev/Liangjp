@@ -9,14 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class HZCLViewController;
-@class HZCLRootViewController;
+@class HZCLCustomNavController;
 
 @interface HZCLAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) HZCLViewController *viewController;
-
-@property (strong, nonatomic) HZCLRootViewController *navRoot;
+@property (strong, nonatomic) HZCLCustomNavController *navRoot;
 
 @end

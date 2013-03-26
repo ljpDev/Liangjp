@@ -8,16 +8,14 @@
 
 #import "HZCLAppDelegate.h"
 
+#import "HZCLCustomNavController.h"
 #import "HZCLViewController.h"
-
-#import "HZCLRootViewController.h"
 
 @implementation HZCLAppDelegate
 
 - (void)dealloc
 {
     [_window release];
-    [_viewController release];
     [_navRoot release];
     [super dealloc];
 }
@@ -25,17 +23,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"_rotation"];
     // Override point for customization after application launch.
     //Add navigation view
-    self.navRoot = [[HZCLRootViewController alloc] initWithNibName:@"HZCLRootViewController" bundle:nil];
-
+    self.navRoot = [[HZCLCustomNavController alloc] init];
+    HZCLViewController *firstView;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[[HZCLViewController alloc] initWithNibName:@"HZCLViewController_iPhone" bundle:nil] autorelease];
-        self.viewController.title =@"Welcome to here";
+        firstView = [[[HZCLViewController alloc] initWithNibName:@"HZCLViewController_iPhone" bundle:nil] autorelease];
+        firstView.title =@"Welcome to here";
     } else {
-        self.viewController = [[[HZCLViewController alloc] initWithNibName:@"HZCLViewController_iPad" bundle:nil] autorelease];
+        firstView = [[[HZCLViewController alloc] initWithNibName:@"HZCLViewController_iPad" bundle:nil] autorelease];
     }
-    [self.navRoot pushViewController:self.viewController animated:YES];
+    [self.navRoot pushViewController:firstView animated:YES];
     [self.window addSubview:self.navRoot.view];
     [self.window makeKeyAndVisible];
     return YES;
@@ -66,6 +66,11 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+//    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeRight];
+//    self.view.transform = CGAffineTransformMakeRotation(M_PI/2);
+//    self.view.bounds = CGRectMake(0, 0, 480, 320);
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +38,29 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    switch (toInterfaceOrientation)
+    {
+        case UIInterfaceOrientationLandscapeLeft:
+        case UIInterfaceOrientationLandscapeRight:
+        case UIInterfaceOrientationPortrait:
+        {
+            return YES;
+        }break;
+        case UIInterfaceOrientationPortraitUpsideDown:
+        default: {
+            return NO;
+        } break;
+    }
+}
+-(BOOL)shouldAutorotate
+{
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"_rotation"];
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return self.topViewController.supportedInterfaceOrientations;
+}
 @end

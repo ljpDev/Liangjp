@@ -33,10 +33,10 @@
 //    return (toInterfaceOrientation != UIDeviceOrientationPortraitUpsideDown);
 //}
 //
-//- (BOOL)shouldAutorotate
-//{
-//    return YES;
-//}
+-(BOOL)shouldAutorotate
+{
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"_rotation"];
+}
 //
 //- (NSUInteger)supportedInterfaceOrientations
 //{
