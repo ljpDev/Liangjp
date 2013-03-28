@@ -139,6 +139,9 @@
 		96B7AF1E1701E99900BC0DF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7AF1D1701E99900BC0DF3 /* AppDelegate.m */; };
 		96B7AF211701E99900BC0DF3 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7AF201701E99900BC0DF3 /* HelloWorldLayer.m */; };
 		96B7AF241701E99900BC0DF3 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B7AF231701E99900BC0DF3 /* IntroLayer.m */; };
+		96B7AF2D17031E8600BC0DF3 /* Player.png in Resources */ = {isa = PBXBuildFile; fileRef = 96B7AF2A17031E8600BC0DF3 /* Player.png */; };
+		96B7AF2E17031E8600BC0DF3 /* Projectile.png in Resources */ = {isa = PBXBuildFile; fileRef = 96B7AF2B17031E8600BC0DF3 /* Projectile.png */; };
+		96B7AF2F17031E8600BC0DF3 /* Target.png in Resources */ = {isa = PBXBuildFile; fileRef = 96B7AF2C17031E8600BC0DF3 /* Target.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -420,6 +423,9 @@
 		96B7AF201701E99900BC0DF3 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		96B7AF221701E99900BC0DF3 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		96B7AF231701E99900BC0DF3 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		96B7AF2A17031E8600BC0DF3 /* Player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Player.png; sourceTree = "<group>"; };
+		96B7AF2B17031E8600BC0DF3 /* Projectile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Projectile.png; sourceTree = "<group>"; };
+		96B7AF2C17031E8600BC0DF3 /* Target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Target.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -494,6 +500,7 @@
 		96B7AD8F1701E99600BC0DF3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				96B7AF3017031E8E00BC0DF3 /* pic_player */,
 				96B7AD901701E99600BC0DF3 /* Default.png */,
 				96B7AD921701E99600BC0DF3 /* Default@2x.png */,
 				96B7AD941701E99600BC0DF3 /* Default-568h@2x.png */,
@@ -870,6 +877,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		96B7AF3017031E8E00BC0DF3 /* pic_player */ = {
+			isa = PBXGroup;
+			children = (
+				96B7AF2B17031E8600BC0DF3 /* Projectile.png */,
+				96B7AF2C17031E8600BC0DF3 /* Target.png */,
+				96B7AF2A17031E8600BC0DF3 /* Player.png */,
+			);
+			name = pic_player;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -933,6 +950,9 @@
 				96B7ADA31701E99600BC0DF3 /* Icon@2x.png in Resources */,
 				96B7ADA61701E99600BC0DF3 /* iTunesArtwork in Resources */,
 				96B7AEFC1701E99800BC0DF3 /* ChangeLog in Resources */,
+				96B7AF2D17031E8600BC0DF3 /* Player.png in Resources */,
+				96B7AF2E17031E8600BC0DF3 /* Projectile.png in Resources */,
+				96B7AF2F17031E8600BC0DF3 /* Target.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

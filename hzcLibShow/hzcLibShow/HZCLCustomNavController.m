@@ -37,30 +37,30 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-{
-    switch (toInterfaceOrientation)
-    {
-        case UIInterfaceOrientationLandscapeLeft:
-        case UIInterfaceOrientationLandscapeRight:
-        case UIInterfaceOrientationPortrait:
-        {
-            return YES;
-        }break;
-        case UIInterfaceOrientationPortraitUpsideDown:
-        default: {
-            return NO;
-        } break;
-    }
-}
--(BOOL)shouldAutorotate
-{
-    return [[NSUserDefaults standardUserDefaults] boolForKey:@"_rotation"];
-}
-
-- (NSUInteger)supportedInterfaceOrientations
-{
-    return self.topViewController.supportedInterfaceOrientations;
-}
+//
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+//{
+//    switch (toInterfaceOrientation)
+//    {
+//        case UIInterfaceOrientationLandscapeLeft:
+//        case UIInterfaceOrientationLandscapeRight:
+//        case UIInterfaceOrientationPortrait:
+//        {
+//            return YES;
+//        }break;
+//        case UIInterfaceOrientationPortraitUpsideDown:
+//        default: {
+//            return NO;
+//        } break;
+//    }
+//}
+//-(BOOL)shouldAutorotate
+//{
+//    return [[NSUserDefaults standardUserDefaults] boolForKey:@"_rotation"];
+//}
+//
+//- (NSUInteger)supportedInterfaceOrientations
+//{
+//    return self.topViewController.supportedInterfaceOrientations;
+//}
 @end

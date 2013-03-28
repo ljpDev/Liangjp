@@ -17,8 +17,6 @@
 		6DF841B716FB2B35008A5066 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF841B616FB2B35008A5066 /* Default@2x.png */; };
 		6DF841B916FB2B35008A5066 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DF841B816FB2B35008A5066 /* Default-568h@2x.png */; };
 		6DF841BC16FB2B35008A5066 /* HZCLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF841BB16FB2B35008A5066 /* HZCLViewController.m */; };
-		6DF841BF16FB2B35008A5066 /* HZCLViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF841BD16FB2B35008A5066 /* HZCLViewController_iPhone.xib */; };
-		6DF841C216FB2B35008A5066 /* HZCLViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF841C016FB2B35008A5066 /* HZCLViewController_iPad.xib */; };
 		96330CE717007D9A00751B2E /* HZCLCustomNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96330CE617007D9A00751B2E /* HZCLCustomNavController.m */; };
 /* End PBXBuildFile section */
 
@@ -38,8 +36,6 @@
 		6DF841B816FB2B35008A5066 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6DF841BA16FB2B35008A5066 /* HZCLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCLViewController.h; sourceTree = "<group>"; };
 		6DF841BB16FB2B35008A5066 /* HZCLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCLViewController.m; sourceTree = "<group>"; };
-		6DF841BE16FB2B35008A5066 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HZCLViewController_iPhone.xib; sourceTree = "<group>"; };
-		6DF841C116FB2B35008A5066 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HZCLViewController_iPad.xib; sourceTree = "<group>"; };
 		96330CE517007D9A00751B2E /* HZCLCustomNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZCLCustomNavController.h; sourceTree = "<group>"; };
 		96330CE617007D9A00751B2E /* HZCLCustomNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCLCustomNavController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +84,7 @@
 		6DF841A816FB2B35008A5066 /* hzcLibShow */ = {
 			isa = PBXGroup;
 			children = (
+				9699DD6E1701E33500D39EFA /* View */,
 				6DF841C816FB2F02008A5066 /* viewController */,
 				6DF841B116FB2B35008A5066 /* HZCLAppDelegate.h */,
 				6DF841B216FB2B35008A5066 /* HZCLAppDelegate.m */,
@@ -115,12 +112,17 @@
 			children = (
 				6DF841BA16FB2B35008A5066 /* HZCLViewController.h */,
 				6DF841BB16FB2B35008A5066 /* HZCLViewController.m */,
-				6DF841BD16FB2B35008A5066 /* HZCLViewController_iPhone.xib */,
-				6DF841C016FB2B35008A5066 /* HZCLViewController_iPad.xib */,
 				96330CE517007D9A00751B2E /* HZCLCustomNavController.h */,
 				96330CE617007D9A00751B2E /* HZCLCustomNavController.m */,
 			);
 			name = viewController;
+			sourceTree = "<group>";
+		};
+		9699DD6E1701E33500D39EFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,8 +181,6 @@
 				6DF841B516FB2B35008A5066 /* Default.png in Resources */,
 				6DF841B716FB2B35008A5066 /* Default@2x.png in Resources */,
 				6DF841B916FB2B35008A5066 /* Default-568h@2x.png in Resources */,
-				6DF841BF16FB2B35008A5066 /* HZCLViewController_iPhone.xib in Resources */,
-				6DF841C216FB2B35008A5066 /* HZCLViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,22 +207,6 @@
 				6DF841AC16FB2B35008A5066 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6DF841BD16FB2B35008A5066 /* HZCLViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6DF841BE16FB2B35008A5066 /* en */,
-			);
-			name = HZCLViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		6DF841C016FB2B35008A5066 /* HZCLViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6DF841C116FB2B35008A5066 /* en */,
-			);
-			name = HZCLViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

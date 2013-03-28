@@ -24,10 +24,9 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"_rotation"];
+    //[[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"_rotation"];
     // Override point for customization after application launch.
     //Add navigation view
-    self.navRoot = [[HZCLCustomNavController alloc] init];
     HZCLViewController *firstView;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         firstView = [[[HZCLViewController alloc] initWithNibName:@"HZCLViewController_iPhone" bundle:nil] autorelease];
@@ -35,8 +34,11 @@
     } else {
         firstView = [[[HZCLViewController alloc] initWithNibName:@"HZCLViewController_iPad" bundle:nil] autorelease];
     }
-    [self.navRoot pushViewController:firstView animated:YES];
-    [self.window addSubview:self.navRoot.view];
+    self.navRoot = [[HZCLCustomNavController alloc] initWithRootViewController:firstView];
+    
+    //[self.navRoot pushViewController:firstView animated:YES];
+    self.window.rootViewController = self.navRoot;
+    //[self.window addSubview:self.navRoot.view];
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong,nonatomic) HZCLViewController *mainView;
+
 @property (strong, nonatomic) HZCLCustomNavController *navRoot;
 
 @end
